@@ -1,10 +1,12 @@
-<!DOCTYPE html>
+#!/bin/env ruby
+# encoding: utf-8
+Header = '<!DOCTYPE html>
 <html>
 	<head>
 		<title>Tsvetelina</title>
 		<style type="text/css">
 			body {
-				background-image:url('../images/2.jpg');
+				background-image:url("../images/2.jpg");
 				background-size: cover;
 				background-repeat: no-repeat;
 				background-attachment: fixed;
@@ -55,20 +57,26 @@
 		</style>
 	</head>
 	<body>	
-		<div class='BG'>
+		<div class="BG">
 			<a href="http://cvetelinast.github.io/bg/" target="_blank">
 				<img width="110px" src="../images/bg.flag.jpg">
 			</a>
 		</div>
-		<div class='container'>
-			<h1>Tsvetelina Stoyanova</h1>
-			<p>If you don't do stupid things while you're young, you'll have nothing to smile about when you're old.</p>
+		<div class="container">
+		<h1>'
+
+
+		Name = 'Tsvetelina Stoyanova'
+		Name_bg = 'Цветелина Стоянова'
+
+		Footer = '</h1>
+		<p>If you don\'t do stupid things while you\'re young, you\'ll have nothing to smile about when you\'re old.</p>
 		</div>
-		<div class='contact'>			
+		<div class="contact">			
 			<p>Contact:</p>
 			<p>e-mail: cvetelinast.96@abv.bg</p>
 		</div>
-		<div class='links'>
+		<div class="links">
 			<p>My facebook profile My github profile</p>						
 			<a href="https://www.facebook.com/cvetelina.stoyanova.16" target="_blank">
 				<img width="110px" src="../images/FaceBook-icon.png">
@@ -77,4 +85,7 @@
 				<img width="100px" src="../images/github.bmp" >
 			</a>
 	</body>
-</html>
+</html>'
+
+File.write 'en/test.html', Header + Name + Footer
+File.write 'bg/test.html', Header + Name_bg + Footer
